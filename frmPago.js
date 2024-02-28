@@ -45950,7 +45950,7 @@ rtl.module("WEBLib.Forms",["System","Classes","Types","SysUtils","WEBLib.Graphic
     };
     this.TriggerNotification = function () {
       if (this.FNotifyCount === 0) {
-      //  alert('Application created with an unlicensed trial version of software');
+ 
       };
       this.FNotifyCount += 1;
     };
