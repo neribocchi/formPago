@@ -56587,6 +56587,8 @@ rtl.module("Unit4",["System","SysUtils","Classes","JS","Web","WEBLib.Graphics","
       this.WebHttpRequest1.FURL = "https://uat.epec.xcapit.com/v1/users/balance/by-cuil/20236608698";
       hdr = "Authorization=Token " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODU0MDM4MjA5LCJpYXQiOjE3MDkwNzgyMDksImp0aSI6Ijg3Nzk1ZmJkNDBmYzQzOWFiY2EwMTdhMzgxMDU4MGJhIiwidXNlcl9pZCI6MX0.qM8JB-5EP1gz5BaZoUiFLb0-66zdS1JXAEBsvjysEvQ";
       this.WebHttpRequest1.FHeaders.Add(hdr);
+      hdr = "Access-Control-Allow-Origin=*";
+      this.WebHttpRequest1.FHeaders.Add(hdr);
       this.WebHttpRequest1.Execute(function (AResponse, AReq) {
         var js = null;
         var ja = null;
