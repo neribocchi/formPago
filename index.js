@@ -56658,7 +56658,7 @@ rtl.module("Unit4",["System","SysUtils","Classes","JS","Web","WEBLib.Graphics","
         this.WebLabel1.SetParentComponent(this.WebPanel1);
         this.WebLabel1.SetName("WebLabel1");
         this.WebLabel1.SetLeft(48);
-        this.WebLabel1.SetTop(184);
+        this.WebLabel1.SetTop(24);
         this.WebLabel1.SetWidth(321);
         this.WebLabel1.SetHeight(71);
         this.WebLabel1.SetAlignment(pas.Classes.TAlignment.taCenter);
