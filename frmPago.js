@@ -61673,7 +61673,7 @@ rtl.module("uForm",["System","SysUtils","Classes","JS","Web","WEBLib.Graphics","
           if (jo.GetJSONValue("detail") === "Not found.") {
             $Self.lbl_balance.SetCaption("$0.00");
           } else {
-            $Self.balance = pas.SysUtils.StrToFloat(pas.SysUtils.StringReplace(jo.GetJSONValue("balance"),".",",",rtl.createSet(pas.SysUtils.TStringReplaceFlag.rfReplaceAll)));
+            $Self.balance = pas.SysUtils.StrToFloat(jo.GetJSONValue("balance"));
             $Self.lbl_balance.SetCaption(pas.SysUtils.FormatFloat("$0.00",$Self.balance));
             $Self.lbl_importe.SetCaption(pas.uIndex.index.lblimporte.FCaption);
           };
@@ -64877,7 +64877,7 @@ rtl.module("uIndex",["System","SysUtils","Classes","JS","Web","WEBLib.Graphics",
     };
   };
 },[]);
-rtl.module("program",["System","WEBLib.Forms","WEBLib.Forms","uIndex","uForm","uFinish"],function () {
+rtl.module("program",["System","WEBLib.Forms","WEBLib.Forms","SysUtils","uIndex","uForm","uFinish"],function () {
   "use strict";
   var $mod = this;
   $mod.$implcode = function () {
@@ -64891,6 +64891,8 @@ rtl.module("program",["System","WEBLib.Forms","WEBLib.Forms","uIndex","uForm","u
   };
   $mod.$main = function () {
     pas["WEBLib.Forms"].Application.Initialize();
+    pas.SysUtils.FormatSettings.ThousandSeparator = " ";
+    pas.SysUtils.FormatSettings.DecimalSeparator = ".";
     pas["WEBLib.Forms"].Application.FMainFormOnTaskBar = true;
     pas["WEBLib.Forms"].Application.CreateForm(pas.uIndex.Tindex,{p: pas.uIndex, get: function () {
         return this.p.index;
